@@ -1,6 +1,6 @@
 :root{
-  --maroon:#6a0f1a;
-  --maroon-dark:#4a0b13;
+  --maroon:#730d0d; /* matches app Color.maroon (0.45, 0.05, 0.05) */
+  --maroon-dark:#570a0a;
   --accent:#ffbd59;
   --bg:#fcf9f8;
   --card:#ffffff;
@@ -12,8 +12,11 @@ html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,
 .container{max-width:1040px;margin:0 auto;padding:0 20px}
 .topbar{position:sticky;top:0;background:#fff;border-bottom:1px solid rgba(0,0,0,.06);z-index:10}
 .nav-row{display:flex;align-items:center;justify-content:space-between;height:56px}
-.brand{display:flex;align-items:center;gap:8px;color:var(--maroon);text-decoration:none;font-weight:700}
-.nav-links a{margin-left:16px;text-decoration:none;color:#333}
+.brand{display:flex;align-items:center;gap:8px;font-weight:700}
+.brand:link,.brand:visited{color:var(--maroon);text-decoration:none}
+.nav-links a{margin-left:16px}
+.nav-links a:link,.nav-links a:visited{color:#333;text-decoration:none}
+.nav-links a:hover{color:var(--maroon)}
 .nav-links a[aria-current="page"]{color:var(--maroon);font-weight:600}
 .flame.small{width:18px;height:18px;fill:var(--maroon)}
 .hero{background:linear-gradient(135deg, var(--maroon), var(--maroon-dark));color:#fff;padding:56px 0 44px;border-bottom-left-radius:20px;border-bottom-right-radius:20px}
